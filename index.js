@@ -85,6 +85,11 @@ document.getElementById("submit-form").addEventListener("submit", (e) => {
     saveData(name, email, message);
 
     alert("Your information has been submitted");
+
+    document.querySelector("#name").value = null;
+    document.querySelector("#email").value = null;
+    document.querySelector("#message").value = null;
+
 });
 
 // Event listener for update button for every user
