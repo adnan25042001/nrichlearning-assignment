@@ -9,12 +9,10 @@
             src="https://kit.fontawesome.com/f29fdf8ecb.js"
             crossorigin="anonymous"
         ></script>
-        <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js"></script>
     </head>
     <body>
         <div class="container">
+            <!-- Submit form for user -->
             <form id="submit-form">
                 <h2>User Form</h2>
                 <input id="name" type="text" placeholder="User Name" />
@@ -28,17 +26,15 @@
                 ></textarea>
                 <input id="submit-btn" type="submit" value="Submit" />
             </form>
+
+            <!-- User details will be shown here -->
             <div class="data">
                 <h1>User Details</h1>
                 <div class="cards">
-                    <div class="card">
-                        <h3>Name: <span>User name</span></h3>
-                        <h3>Email: <span>email@gmail.com</span></h3>
-                        <p>Message: <span>This is a message from user</span></p>
-                        <button id="update">Update</button>
-                    </div>
                 </div>
             </div>
+
+            <!-- Update form for user -->
             <div class="update-container">
                 <div class="layer"></div>
                 <form id="update-form">
@@ -57,6 +53,7 @@
                 </form>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+        <script src="./index.js"></script>
     </body>
-    <script src="./index.js"></script>
 </html>

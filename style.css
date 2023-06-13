@@ -83,16 +83,16 @@ textarea:focus {
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    columns: 2;
+    column-gap: 15px;
     height: 100%;
     overflow: auto;
 }
 
 .card {
-    width: 300px;
-    height: fit-content;
+    width: 97%;
+    margin-bottom: 15px;
+    break-inside: avoid;
     border-radius: 12px;
     padding: 6px;
     border: 2px solid #8d2de2;
@@ -105,6 +105,8 @@ textarea:focus {
 .card h3 {
     font-size: 16px;
     font-weight: bold;
+    display: flex;
+    overflow: hidden;
 }
 
 .card p {
@@ -116,7 +118,13 @@ textarea:focus {
     font-weight: normal;
 }
 
-#update {
+.card div{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#update, #delete {
     font-size: 18px;
     font-weight: 500;
     transition: ease 0.5s;
@@ -127,13 +135,16 @@ textarea:focus {
     color: white;
     border: 2px solid #8d2de2;
     cursor: pointer;
-    margin: auto;
-    margin-left: 0px;
     margin-top: 10px;
 }
 
-#update:hover {
+#update:hover , #delete:hover{
     opacity: 0.6;
+}
+
+#delete{
+    background-color: red;
+    border: 2px solid red;
 }
 
 .update-container {
@@ -197,6 +208,9 @@ textarea:focus {
     #update-btn,
     .data {
         width: 80%;
+    }
+    .cards{
+        columns: 1;
     }
 }
 
